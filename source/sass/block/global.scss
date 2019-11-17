@@ -1,0 +1,26 @@
+body {
+  background-color: red;
+}
+
+body {
+  min-width: $mobile-width;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
