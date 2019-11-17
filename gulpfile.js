@@ -15,6 +15,7 @@ var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
 var htmlmin = require("gulp-htmlmin")
+var autoprefixer = require("autoprefixer");
 
 gulp.task("clean", function () {
   return del("build");
@@ -41,7 +42,9 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -119,3 +122,24 @@ gulp.task("start", gulp.series(
 gulp.task("optimizeimg", gulp.series(
   "images",
   "webp"));
+
+  //   "browser-sync": "2.26.x",
+  //   "gulp": "^4.0.2",
+  //   "gulp-csso": "^3.0.1",
+  //   "gulp-imagemin": "^6.1.0",
+  //   "gulp-plumber": "1.2.x",
+  //   "gulp-postcss": "8.0.x",
+  //   "gulp-posthtml": "^3.0.4",
+  //   "gulp-rename": "^1.4.0",
+  //   "gulp-sass": "^4.0.2",
+  //   "gulp-sourcemaps": "2.6.x",
+  //   "gulp-svgstore": "^7.0.1",
+  //   "gulp-webp": "^4.0.1",
+  //   "posthtml-include": "^1.2.0",
+  //   "stylelint": "10.1.x"},
+  // "scripts": {
+  //   "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+  //   "test": "npm run stylelint",
+  //   "build": "gulp build",
+  //   "optimizeimg": "gulp optimizeimg",
+  //   "start": "gulp start"
