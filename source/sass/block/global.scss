@@ -22,22 +22,20 @@
   font-style: normal;
 }
 
+html {
+  box-sizing: border-box;
+  @include text;
+  background-color: rgb(26, 20, 59);
+}
 
 body {
   min-width: $mobile-width;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-html {
-  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
+  @include text;
 }
 
 *,

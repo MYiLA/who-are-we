@@ -1,9 +1,9 @@
-@mixin green-title ($size:24px, $line:24px) {
+@mixin text ($size:16px, $line:24px) {
   margin: 0;
   padding: 0;
   color: rgb(255, 255, 255);
   font-family: $font-main;
   font-size: $size;
-  font-weight: 900;
+  font-weight: 500;
   line-height: $line;
 }
