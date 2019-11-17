@@ -78,6 +78,7 @@ gulp.task("images", function () {
     ]))
     .pipe(gulp.dest("source/img"));
 });
+
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({
@@ -85,6 +86,7 @@ gulp.task("webp", function () {
     }))
     .pipe(gulp.dest("source/img"));
 });
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -116,12 +118,13 @@ gulp.task("build", gulp.series(
 
 gulp.task("start", gulp.series(
   "build",
-  "server",
+  "server"
 ));
 
 gulp.task("optimizeimg", gulp.series(
   "images",
-  "webp"));
+  "webp"
+));
 
   //   "browser-sync": "2.26.x",
   //   "gulp": "^4.0.2",
