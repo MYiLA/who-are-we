@@ -1,10 +1,35 @@
-body {
-  background-color: red;
+@font-face {
+    font-family: 'Roboto'; 
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
+
+@font-face {
+  font-family: 'Roboto'; 
+  src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+  url('../fonts/roboto-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto'; 
+  src: url('../fonts/roboto-black-webfont.woff2') format('woff2'),
+  url('../fonts/roboto-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
 
 body {
   min-width: $mobile-width;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 html {
@@ -24,3 +49,4 @@ a {
 .visually-hidden {
   @include visually-hidden;
 }
+// font-family: 'Roboto', sans-serif;
