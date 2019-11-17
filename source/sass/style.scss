@@ -1,4 +1,19 @@
 @import "variables.scss";
+
 @import "mixins/visually-hidden.scss";
 @import "mixins/text.scss";
+@import "mixins/input.scss";
+@import "mixins/btn-red.scss";
+@import "mixins/close-btn.scss";
+
 @import "block/global.scss";
+@import "block/main-nav.scss";
+@import "block/project.scss";
+@import "block/about-company.scss";
+@import "block/account-created.scss";
+@import "block/avatar.scss";
+@import "block/competition.scss";
+@import "block/contacts.scss";
+@import "block/password-recovery.scss";
+@import "block/password-send.scss";
+@import "block/user-identification.scss";
