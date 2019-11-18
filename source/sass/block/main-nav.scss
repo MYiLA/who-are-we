@@ -118,7 +118,7 @@
   }
 }
 
-.main-nav__uzer-initials {
+.main-nav__user-initials {
   display: none;
 }
 
@@ -128,11 +128,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__uzer-initials {
+  .main-nav__user-initials {
     display: none;
   }
 
-  .main-nav__uzer-initials {
+  .main-nav__user-initials {
     display: block;
     text-align: center;
     padding-top: 4px;

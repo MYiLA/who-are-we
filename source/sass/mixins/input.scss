@@ -1,0 +1,29 @@
+@mixin input {
+  display: block;
+  width: 100%;
+  padding: 9px;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $white;
+  color: rgb(150, 138, 207);
+  box-shadow: inset 0 -2px 0 rgb(246,245,255);
+  cursor: pointer;
+
+  &--invalid {
+    box-shadow: inset 0 -2px 0 $accent-color;
+  }
+  
+  &:focus, &:hover {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: $white;
+  }
+  
+ &::placeholder {
+    color: rgb(150, 138, 207);
+  }
+}

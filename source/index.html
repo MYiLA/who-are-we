@@ -50,7 +50,7 @@
             </a>
           </li>
         </ul>
-        <a class="main-nav__uzer-initials" href="#">
+        <a class="main-nav__user-initials" href="#">
           А
         </a>
         <button class="main-nav__enter" type=button>
@@ -147,16 +147,14 @@
       Если у вас еще нет профиля на ivi talents, он будет создан
     </p>
     <div class="user-identification__slider">
+      <input class="visually-hidden" type="radio" id="toggle-autorisation" name="toggle-slider" checked>
+      <input class="visually-hidden" type="radio" id="toggle-registration" name="toggle-slider">
       <label class="user-identification__slider-autorisation" for="toggle-autorisation">
         Вход в профиль
       </label>
-      <input class="visually-hidden user-identification__toggle-autorisation" type="radio" id="toggle-autorisation"
-        name="toggle-slider" checked>
-      <label class="" for="toggle-registration">
+      <label class="user-identification__slider-registration" for="toggle-registration">
         Регистрация
       </label>
-      <input class="visually-hidden user-identification__toggle-registration" type="radio" id="toggle-registration"
-        name="toggle-slider">
     </div>
     <form class="user-identification__form" id="autorisation" method="post" autocomplete="off">
       <input class="user-identification__input" type="text" id="autorisation-email" name="email" placeholder="E-mail" />
