@@ -1,4 +1,25 @@
 .about-company {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: $dark-background;
   background-image: url(../img/project-picture@1x.jpg);
+  background-size: 250%;
+  background-repeat: no-repeat;
+  background-position: 47% -125px;
+}
+
+.about-company__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 36px;
+}
+
+.about-company__desc {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
 }
