@@ -5,8 +5,12 @@
   // flex-wrap: wrap;
   // align-items: center;
   padding-top: 20px;
+  padding-bottom: 25px;
 }
 
 .footer__copyright, .footer__contacts {
   margin: 0 auto;
+}
+.footer__copyright {
+  margin-bottom: 5px;
 }

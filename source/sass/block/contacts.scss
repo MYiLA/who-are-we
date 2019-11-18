@@ -1,0 +1,43 @@
+.contacts {
+  width: 168px;
+}
+
+.contacts__appeal {
+  display: none;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts__item {
+  margin-right: 14px;
+  &:nth-child(4n + 4) {
+    margin-right: 0;
+  }
+}
+
+.contacts__link {
+  & img {
+    opacity: 0.72; 
+  width: 31px;
+  height: 31px;
+  }
+  &:focus img,
+  &:hover img {
+    opacity: 0.85;
+  }
+
+  &:active img {
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .contacts__appeal {
+    display: block;
+    font-size: 13px;
+  }
+}
