@@ -1,0 +1,12 @@
+@mixin btn {
+  @include text;
+  display: block;
+  width: 100%;
+  padding: 9px;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $accent-color;
+  color: $white;
+  cursor: pointer;
+}

@@ -13,49 +13,53 @@
 <body>
   <header>
     <nav class="main-nav main-nav--closed">
-      <a class="main-nav__logo">
-        <picture>
-          <source media="(min-width: 1160px)" srcset="../img/logo-talents-desktop.svg">
-          <img src="../img/logo-talents-mobile.svg" alt="Логотип ivi talents">
-        </picture>
-      </a>
-      <button class="main-nav__menu-btn" type=button aria-label="показать или закрыть меню"></button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link">
-            О проекте
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Правила
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Мастерклассы
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            Контакты
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
-            F.A.Q.
-          </a>
-        </li>
-      </ul>
-      <a class="main-nav__uzer-initials" href="#">
-        А
-      </a>
-      <button class="main-nav__enter" type=button>
-        Войти
-      </button>
-      <a class="main-nav__account" href="#">
-        Личный кабинет
-      </a>
+      <div class="main-nav__wrap">
+        <a class="main-nav__logo">
+          <picture>
+            <source media="(min-width: 1160px)" srcset="../img/logo-talents-desktop.svg">
+            <img src="../img/logo-talents-mobile.svg" alt="Логотип ivi talents">
+          </picture>
+        </a>
+        <button class="main-nav__menu-btn" type=button aria-label="показать или закрыть меню"></button>
+      </div>
+      <div class="main-nav__wrap-menu">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link">
+              О проекте
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Правила
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Мастерклассы
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              Контакты
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">
+              F.A.Q.
+            </a>
+          </li>
+        </ul>
+        <a class="main-nav__uzer-initials" href="#">
+          А
+        </a>
+        <button class="main-nav__enter" type=button>
+          Войти
+        </button>
+        <a class="main-nav__account visually-hidden" href="#">
+          Личный кабинет
+        </a>
+      </div>
     </nav>
   </header>
   <main class="project">

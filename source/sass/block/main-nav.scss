@@ -1,3 +1,157 @@
 .main-nav {
-background-color: rgb(40, 34, 81);
+  background-color: $dark-background;
+}
+
+.main-nav__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: $light-background;
+}
+
+.main-nav__logo {
+  width: 228px;
+  background-image: url(../img/logo-header-base.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 14px;
+  padding-bottom: 9px;
+}
+
+.main-nav__logo img {
+  margin-left: 24px;
+}
+
+.main-nav__menu-btn {
+  position: relative;
+  width: 32px;
+  min-height: 24px;
+  margin-right: 24px;
+  margin-bottom: 3px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    background-color: $white;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    top: 0;
+    box-shadow: 0 10px 0 $white;
+  }
+
+  &::before {
+    bottom: 0;
+  }
+
+  &:focus,
+  &:hover {
+    &::after {
+      box-shadow: 0 10px 0 $light-gray;
+    }
+  }
+
+  &:active {
+    &::after {
+      box-shadow: 0 10px 0 $dark-gray;
+    }
+  }
+
+  .main-nav--closed & {
+    @include close-btn;
+
+    &::after {
+      box-shadow: 0 0px 0 $white;
+    }
+  }
+}
+
+.main-nav__wrap-menu {
+ padding-left: 24px;
+ padding-right: 24px;
+ padding-bottom: 55px;
+}
+
+.main-nav__list {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 45px;
+}
+
+.main-nav__item {
+  display: block;
+  padding: 12px;
+  text-align: center;
+}
+
+.main-nav__link {
+  position: relative;
+  display: inline;
+  font-size: 24px;
+  line-height: 28px;
+  opacity: 0.72;
+
+  &:focus,
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:not([href]) {
+    opacity: 1;
+    &::before{
+      content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    opacity: 1;
+    background-color: rgb(236, 23, 79);
+    }
+  }
+}
+
+.main-nav__uzer-initials{
+  display: none;
+}
+
+.main-nav__enter, .main-nav__account {
+  @include btn;
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__uzer-initials{
+    display: none;
+  }
+
+  .main-nav__uzer-initials {
+    display: block;
+    text-align: center;
+    padding-top: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgb(0, 165, 255);
+  }
 }
