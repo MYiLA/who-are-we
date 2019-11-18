@@ -7,10 +7,41 @@
   background-size: 250%;
   background-repeat: no-repeat;
   background-position: 47% -125px;
+  
 
   @media (min-resolution: $retina-dpi),
   (min-resolution: $retina-dppx) {
     background-image: url(../img/project-picture@2x.jpg);
+  }
+
+  @media (min-width: 392px) {
+    background-size: 200%;
+    background-position: 53% -125px;
+  }
+
+  @media (min-width: 458px) {
+    background-size: 160%;
+    background-position: 33% -125px;
+  }
+
+  @media (min-width: 552px) {
+    background-size: 135%;
+    background-position: 45% -125px;
+  }
+
+  @media (min-width: 880px) {
+    background-size: 95%;
+    background-position: 140px -125px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 100%;
+    background-position: 75px -85px;
+  }
+
+  @media (min-width: 1272px) {
+    background-size: 100%;
+    background-position: 0 -100px;
   }
 }
 
@@ -21,6 +52,11 @@
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    margin-bottom: 60px;
+  }
 }
 
 .about-company__desc {

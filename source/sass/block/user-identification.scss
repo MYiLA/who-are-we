@@ -1,5 +1,8 @@
 .user-identification {
   @include popap;
+  &--close {
+    display: none;
+  }
 }
 
 .user-identification__close {
@@ -33,7 +36,8 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+
   &::after {
     content: "";
     position: absolute;
@@ -45,8 +49,13 @@
   }
 }
 
+.user-identification__slider-autorisation,
+.user-identification__slider-registration {
+  width: 50%;
+  text-align: center;
+}
+
 .user-identification__slider-autorisation {
-  padding-left: 3%;
   &::after {
     content: "";
     position: absolute;
@@ -55,15 +64,11 @@
     left: 0;
     bottom: 0;
     background-color: transparent;
-    // background-color: $accent-color;
+    transition: 0.6s;
   }
-}
-.user-identification__slider-autorisation::after {
-  background-color: red;
 }
 
 .user-identification__slider-registration {
-  padding-right: 7%;
   &::after {
     content: "";
     position: absolute;
@@ -72,11 +77,61 @@
     bottom: 0;
     right: 0;
     background-color: transparent;
+    transition: 0.4s;
   }
 }
 
+.user-identification__form {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  &--close {
+    display: none;
+  }
+}
+
+.user-identification__toggle-autorisation:checked~.user-identification__slider-autorisation::after {
+  background-color: $accent-color;
+}
+
+.user-identification__toggle-registration:checked~.user-identification__slider-registration::after {
+  background-color: $accent-color;
+}
+
 .user-identification__input {
-@include input;
-text-align: left;
-margin-bottom: 15px;
+  @include input;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.user-identification__submit {
+  @include btn;
+  margin-bottom: 40px;
+}
+
+.user-identification__invalid {
+  line-height: 24px;
+  color: rgb(252, 23, 79);
+  flex-grow: 1;
+}
+
+.user-identification__btn-recovery {
+  @include text;
+  border: none;
+  background-color: transparent;
+  padding-bottom: 60px;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    opacity: 0.85;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }

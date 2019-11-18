@@ -4,22 +4,48 @@
   padding-left: 14px;
   padding-right: 14px;
   padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 35px;
+  }
 }
 
 .competition__desc {
   font-weight: 700;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 275px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding-top: 10px;
+  }
 }
 
-.competition__submit, .competition__clarify {
+.competition__submit,
+.competition__clarify {
   @include btn;
   margin-bottom: 16px;
+  @media (min-width: $tablet-width) {
+    width: 48%;
+    }
 }
 
 .competition__clarify {
   padding-top: 7px;
   padding-bottom: 7px;
-  border: 2px solid rgb(248, 16, 77);
+  border: 2px solid $white;
   background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .competition__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }

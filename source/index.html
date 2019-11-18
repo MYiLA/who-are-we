@@ -95,12 +95,14 @@
         Презентуйте свои идеи, и возможно именно
         Ваш сериал увидит свет в проекте ivi!
       </p>
-      <button class="competition__submit" type=button>
-        Подать заявку
-      </button>
-      <a class="competition__clarify" href="#">
-        Как это работает?
-      </a>
+      <div class="competition__wrap" >
+        <button class="competition__submit" type=button>
+          Подать заявку
+        </button>
+        <a class="competition__clarify" href="#">
+          Как это работает?
+        </a>
+      </div>
     </article>
   </main>
   <footer class="footer">
@@ -138,7 +140,7 @@
   </footer>
 
   <!-- Модальное окно с переключателем форм: регистрация и вход в профиль -->
-  <div class="user-identification">
+  <div class="user-identification user-identification--close">
     <button class="user-identification__close" type="button"></button>
     <p class="user-identification__title">
       Войдите или зарегистрируйтесь
@@ -147,8 +149,10 @@
       Если у вас еще нет профиля на ivi talents, он будет создан
     </p>
     <div class="user-identification__slider">
-      <input class="visually-hidden" type="radio" id="toggle-autorisation" name="toggle-slider" checked>
-      <input class="visually-hidden" type="radio" id="toggle-registration" name="toggle-slider">
+      <input class="visually-hidden user-identification__toggle-autorisation" type="radio" id="toggle-autorisation"
+        name="toggle-slider" checked>
+      <input class="visually-hidden user-identification__toggle-registration" type="radio" id="toggle-registration"
+        name="toggle-slider">
       <label class="user-identification__slider-autorisation" for="toggle-autorisation">
         Вход в профиль
       </label>
@@ -169,35 +173,36 @@
       <button class="user-identification__submit" type="submit">
         Отправить
       </button>
-      <p class="user-identification__invalid">
-        Неверная пара логин/пароль
-      </p>
-      <button type="button">
+      <p class="user-identification__invalid"></p>
+      <button class="user-identification__btn-recovery" type="button">
         Восстановить пароль
       </button>
     </form>
-    <form class="user-identification__form" id="registration" method="post" autocomplete="off">
+    <form class="user-identification__form user-identification__form--close" id="registration" method="post"
+      autocomplete="off">
       <input class="user-identification__input" type="text" id="autorisation-email" name="email" placeholder="E-mail" />
       <label class="visually-hidden" for="autorisation-email">
         Введите E-mail
       </label>
-      <input class="user-identification__input" type="password" id="autorisation-password" name="email"
+      <input class="user-identification__input" type="password" id="autorisation-password" name="password"
         placeholder="Пароль" />
       <label class="visually-hidden" for="autorisation-password">
-        Введите Пароль
+        Введите пароль
+      </label>
+      <input class="user-identification__input" type="password" id="autorisation-password-repeat" name="password-repeat"
+        placeholder="Повторите пароль" />
+      <label class="visually-hidden" for="autorisation-password-repeat">
+        Повторите пароль
       </label>
       <button class="user-identification__submit" type="submit">
         Отправить
       </button>
-      <p class="user-identification__invalid">
-        Введенные пароли не совпадают,
-        повторите попытку
-      </p>
+      <p class="user-identification__invalid"></p>
     </form>
   </div>
 
   <!-- Форма восстановления пароля -->
-  <div class="password-recovery">
+  <div class="password-recovery password-recovery--close">
     <button class="password-recovery__close" type="button"></button>
     <h2 class="password-recovery__title">Восстановление пароля</h2>
     <p class="password-recovery__desc">
