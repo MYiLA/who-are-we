@@ -42,7 +42,7 @@
 
     &::after {
       top: 0;
-      box-shadow: 0 10px 0 $white;
+      box-shadow: 0 10px 0 $dark-gray;
     }
 
     &::before {
@@ -58,7 +58,7 @@
 
     &:active {
     &::after {
-      box-shadow: 0 10px 0 $dark-gray;
+      box-shadow: 0 10px 0 $white;
     }
   }
   }

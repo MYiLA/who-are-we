@@ -14,7 +14,7 @@
     height: 3px;
     top: 50%;
     left: 0;
-    background-color: $white;
+    background-color: $dark-gray;
     transform: translate(-50%);
   }
 
@@ -35,7 +35,7 @@
 
   &:active {
     &::after, &::before {
-      background-color: $dark-gray;
+      background-color: $white;
     }
   }
 }
