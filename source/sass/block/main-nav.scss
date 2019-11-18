@@ -125,15 +125,6 @@
 .main-nav__enter,
 .main-nav__account {
   @include btn;
-
-  &:focus,
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 @media (min-width: $desktop-width) {

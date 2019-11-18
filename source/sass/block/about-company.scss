@@ -7,14 +7,19 @@
   background-size: 250%;
   background-repeat: no-repeat;
   background-position: 47% -125px;
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    background-image: url(../img/project-picture@2x.jpg);
+  }
 }
 
 .about-company__title {
   margin: 0;
   padding: 0;
   margin-bottom: 35px;
-  font-size: 25px;
-  font-weight: 900;
+  font-size: 28px;
+  font-weight: 700;
   line-height: 36px;
 }
 

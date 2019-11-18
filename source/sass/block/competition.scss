@@ -1,0 +1,25 @@
+.competition {
+  background-color: $light-background;
+  padding-top: 26px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+}
+
+.competition__desc {
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.competition__submit, .competition__clarify {
+  @include btn;
+  margin-bottom: 16px;
+}
+
+.competition__clarify {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 2px solid rgb(248, 16, 77);
+  background-color: transparent;
+}
