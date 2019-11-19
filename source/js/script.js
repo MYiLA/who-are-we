@@ -11,11 +11,6 @@ var sliderRegisterElement = identificationElement.querySelector('.user-identific
 var formRegisterElement = identificationElement.querySelector('#registration');
 var formAuthorizeElement = identificationElement.querySelector('#authorization');
 
-console.log(sliderAuthorizeElement)
-console.log(sliderRegisterElement)
-console.log(formRegisterElement)
-console.log(formAuthorizeElement)
-
 menuBtnElement.addEventListener('click', function () {
   if (mainNavElement.classList.contains("main-nav--close")) {
     mainNavElement.classList.remove("main-nav--close");
