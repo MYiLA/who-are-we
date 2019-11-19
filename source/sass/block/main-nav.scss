@@ -1,7 +1,9 @@
 .main-nav {
   background-color: $dark-background;
 
-  &--opened {
+  &--open {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     overflow-y: auto;
     width: 100%;
@@ -60,15 +62,6 @@
     background-color: transparent;
   }
 
-  .main-nav--opened & {
-    @include close-btn;
-    margin-right: 24px;
-
-    &::after {
-      box-shadow: 0 0px 0 $white;
-    }
-  }
-
   .main-nav--close & {
     @include close-btn;
     margin-right: 24px;
@@ -101,15 +94,30 @@
       }
     }
   }
+
+  .main-nav--open & {
+    @include close-btn;
+    margin-right: 24px;
+
+    &::after {
+      box-shadow: 0 0px 0 $white;
+    }
+  }
 }
 
 .main-nav__wrap-menu {
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 55px;
+  padding-bottom: 80px;
 
   .main-nav--close & {
     display: none;
+  }
+  .main-nav--open & {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -164,12 +172,15 @@
 .main-nav__enter,
 .main-nav__account {
   @include btn;
+  width: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: $desktop-width) {
   .main-nav {
     position: relative;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     overflow-y: visible;
     background-color: $light-background;
@@ -196,6 +207,8 @@
     display: block; 
     flex-grow: 1;
     display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
    align-items: center;
     padding: 21px;
     padding-top: 0;
