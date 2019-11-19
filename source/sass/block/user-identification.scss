@@ -1,6 +1,6 @@
 .user-identification {
   @include popap;
-  overflow-y: visible;
+  overflow-y: auto;
   &--close {
     display: none;
   }
