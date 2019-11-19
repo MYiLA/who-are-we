@@ -24,19 +24,31 @@
     background-position: 33% -125px;
   }
 
+  @media (min-width: $tablet-width) {
+    padding-left: 32px;
+    padding-left: 32px;
+    margin-bottom: 0;
+    padding-bottom: 56px;
+  }
+
   @media (min-width: 552px) {
     background-size: 135%;
     background-position: 45% -125px;
   }
 
+  @media (min-width: 667px) {
+    background-size: 105%;
+    background-position: 45% -115px;
+  }
+
   @media (min-width: 880px) {
     background-size: 95%;
     background-position: 140px -125px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
-    background-size: 100%;
-    background-position: 75px -85px;
+ padding-bottom: 100px;
   }
 
   @media (min-width: 1272px) {
@@ -48,19 +60,35 @@
 .about-company__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
-    width: 250px;
-    margin-bottom: 60px;
+    width: 285px;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 500px;
+    font-size: 56px;
+    line-height: 56px;
+    padding-top: 95px;
+    margin-bottom: 5px;
   }
 }
 
 .about-company__desc {
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
+  padding-top: 40px;
+  
+
+  @media (min-width: 598px) {
+    width: 500px;
+    &--short {
+      width: 438px;
+    }
+  }
 }

@@ -29,6 +29,11 @@
   opacity: 0.72;
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding-bottom: 5px;
+   }
+
+   @media (min-width: $desktop-width) {
+    order: -1;
    }
 }
 

@@ -12,7 +12,8 @@
 
 <body>
   <header>
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--close">
+      <!--main-nav--close -->
       <div class="main-nav__wrap">
         <a class="main-nav__logo">
           <picture>
@@ -60,6 +61,39 @@
           Личный кабинет
         </a>
       </div>
+      <footer class="main-nav__footer footer">
+        <a class="footer__copyright copyright" href="#" target="_blank">
+          <img src="img/logo-iviru.svg" alt="логотип ООО иви.ру" width="30" height="26">
+          <p class="copyright__desc">© 2019 ООО «Иви.ру»</p>
+        </a>
+        <div class="footer__contacts  contacts">
+          <p class="contacts__appeal">
+            Присоединяйтесь:
+          </p>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a class="contacts__link" href="#">
+                <img src="img/icon-fb.svg" alt="Фейсбук">
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="#">
+                <img src="img/icon-vk.svg" alt="Вконтакте">
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="#">
+                <img src="img/icon-instagram.svg" alt="Инстаграм">
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="#">
+                <img src="img/icon-telegram.svg" alt="Телеграм">
+              </a>
+            </li>
+          </ul>
+          </section>
+      </footer>
     </nav>
   </header>
   <main class="project">
@@ -71,7 +105,7 @@
         Кто мы? Откуда?
         Куда мы идём?
       </p>
-      <p class="about-company__desc">
+      <p class="about-company__desc about-company__desc--short">
         <strong href="#">
           ivi Talents
         </strong>
@@ -95,7 +129,7 @@
         Презентуйте свои идеи, и возможно именно
         Ваш сериал увидит свет в проекте ivi!
       </p>
-      <div class="competition__wrap" >
+      <div class="competition__wrap">
         <button class="competition__submit" type=button>
           Подать заявку
         </button>
@@ -249,7 +283,7 @@
     </section>
   </template>
 
-  <script src="js/script.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

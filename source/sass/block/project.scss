@@ -10,4 +10,9 @@
 .project__competition {
   margin-left: 24px;
   margin-right: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }
