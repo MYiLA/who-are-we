@@ -48,15 +48,19 @@ navInitialsElement.addEventListener('click', function () {
   identificationElement.classList.remove('user-identification--close');
 });
 
+var resetFormAutorize = function () {
+  formRegisterElement.reset();
+  registerEmailElement.classList.remove('user-identification__input--invalid');
+  registerPasswordElement.classList.remove('user-identification__input--invalid');
+  registerPasswordRepeatElement.classList.remove('user-identification__input--invalid');
+  invalidRegisterElement.textContent = '';
+}
+
 var onOpenAutorizeClick = function () {
   if (formAuthorizeElement.classList.contains('user-identification__form--close')) {
     formAuthorizeElement.classList.remove('user-identification__form--close');
     formRegisterElement.classList.add('user-identification__form--close');
-    formRegisterElement.reset();
-    registerEmailElement.classList.remove('user-identification__input--invalid');
-    registerPasswordElement.classList.remove('user-identification__input--invalid');
-    registerPasswordRepeatElement.classList.remove('user-identification__input--invalid');
-    invalidRegisterElement.textContent = '';
+    resetFormAutorize();
   } else return
 };
 
@@ -193,5 +197,6 @@ var showAccountCreatedPopap = function () {
 
   mainElement.querySelector('.account-created__close').addEventListener('click', function () {
     mainElement.querySelector('.account-created__inner').remove();
+    resetFormAutorize();
   });
 };
