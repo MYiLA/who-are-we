@@ -8,6 +8,7 @@
   font-size: 16px;
   line-height: 20px;
   font-family: $font-main;
+  font-weight: 500;
   background-color: $white;
   color: rgb(150, 138, 207);
   box-shadow: inset 0 -2px 0 rgb(246,245,255);
@@ -25,7 +26,11 @@
     opacity: 1;
   }
   
- &::placeholder {
+ &::placeholder { 
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $font-main;
+    font-weight: 500;
     color: rgb(150, 138, 207);
   }
 }
