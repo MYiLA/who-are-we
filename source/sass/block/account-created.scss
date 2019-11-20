@@ -1,0 +1,68 @@
+.account-created__inner {
+  @include popap;
+}
+
+.account-created__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+}
+
+.account-created__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: 700;
+}
+
+.account-created__thank {
+  display: none;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: 700;
+}
+
+.account-created__close {
+  @include close-btn;
+  align-self: flex-end;
+  margin-bottom: 140px;
+}
+
+.account-created__desc {
+  max-width: 450px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 55px;
+}
+
+.account-created__button {
+  max-width: 326px;
+  @include btn;
+}
+
+.account-created__inner--thanks {
+  & .account-created__thank {
+    display: block;
+  }
+
+  & .account-created__button,
+  & .account-created__title {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  .account-created__title,
+  .account-created__thank {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}

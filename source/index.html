@@ -274,15 +274,16 @@
   <!-- Сообщение об успешном создании аккаунта -->
   <template id="account-created">
     <section class="account-created">
-      <button class="account-created__close" type="button"></button>
       <div class="account-created__inner">
-        <h2 class="account-created__title">Аккаунт создан</h2>
-        <p class="account-created__thank">Спасибо!</p>
-        <!--переключение на Спасибо!, выключение кнопки и исчезание модалки реализовать на js-->
-        <p class="account-created__desc">
-          Благодарим за создание аккаунта. Вам на почту прийдет письмо со ссылкой для завершения регистрации
-        </p>
-        <button class="account-created__button" type="button">Окей</button>
+        <button class="account-created__close" type="button"></button>
+        <div class="account-created__wrap">
+          <h2 class="account-created__title">Аккаунт создан</h2>
+          <p class="account-created__thank">Спасибо!</p>
+          <p class="account-created__desc">
+            Благодарим за создание аккаунта. Вам на почту прийдет письмо со ссылкой для завершения регистрации
+          </p>
+          <button class="account-created__button" type="button">Окей</button>
+        </div>
       </div>
     </section>
   </template>

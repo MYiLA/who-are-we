@@ -188,10 +188,10 @@ var showAccountCreatedPopap = function () {
   var clozeButtonElement = document.querySelector('.account-created__button');
 
   clozeButtonElement.addEventListener('click', function () {
-    var popup = document.querySelector('.account-created');
-    popup.classList.add('account-created--thanks');
-    popup.addEventListener('click', function () {
-      popup.remove();
-    })
+    mainElement.querySelector('.account-created__inner').classList.add('account-created__inner--thanks');
+  });
+
+  mainElement.querySelector('.account-created__close').addEventListener('click', function () {
+    mainElement.querySelector('.account-created__inner').remove();
   });
 };
