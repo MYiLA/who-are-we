@@ -200,3 +200,7 @@ var showAccountCreatedPopap = function () {
     resetFormAutorize();
   });
 };
+
+mainElement.querySelector('.competition__submit').addEventListener('click', function(){
+  identificationElement.classList.remove('user-identification--close');
+});
