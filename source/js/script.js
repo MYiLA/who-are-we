@@ -10,21 +10,31 @@ var sliderAuthorizeElement = identificationElement.querySelector('.user-identifi
 var sliderRegisterElement = identificationElement.querySelector('.user-identification__slider-registration');
 var formRegisterElement = identificationElement.querySelector('#registration');
 var formAuthorizeElement = identificationElement.querySelector('#authorization');
+var autorizeSubmitElement = formAuthorizeElement.querySelector(".user-identification__submit")
+var registerSubmitElement = formRegisterElement.querySelector(".user-identification__submit")
 
-menuBtnElement.addEventListener('click', function () {
+var openMainMenu = function () {
+  mainNavElement.classList.remove("main-nav--close");
+  mainNavElement.classList.add("main-nav--open");
+}
+
+var closeMainMenu = function () {
+  mainNavElement.classList.remove("main-nav--open");
+  mainNavElement.classList.add("main-nav--close");
+}
+
+var moveMenu = function () {
   if (mainNavElement.classList.contains("main-nav--close")) {
-    mainNavElement.classList.remove("main-nav--close");
-    mainNavElement.classList.add("main-nav--open");
+    openMainMenu
   } else {
-    mainNavElement.classList.remove("main-nav--open");
-    mainNavElement.classList.add("main-nav--close");
+    closeMainMenu
   }
-});
+}
+
+menuBtnElement.addEventListener('click', moveMenu);
 
 navEnterElement.addEventListener('click', function () {
   identificationElement.classList.remove("user-identification--close");
-  mainNavElement.classList.remove("main-nav--open");
-  mainNavElement.classList.add("main-nav--close");
 });
 
 identificationCloseElement.addEventListener('click', function () {
@@ -33,20 +43,35 @@ identificationCloseElement.addEventListener('click', function () {
 
 navInitialsElement.addEventListener('click', function () {
   identificationElement.classList.remove("user-identification--close");
+  closeMainMenu()
 });
 
-sliderAuthorizeElement.addEventListener('click', function () {
+var openAutorizeForm = function () {
   if (formAuthorizeElement.classList.contains("user-identification__form--close")) {
     formAuthorizeElement.classList.remove("user-identification__form--close");
     formRegisterElement.classList.add("user-identification__form--close");
-  }
-  else return
-});
+  } else return
+}
 
-sliderRegisterElement.addEventListener('click', function () {
+var openRegisterForm = function () {
   if (formRegisterElement.classList.contains("user-identification__form--close")) {
     formRegisterElement.classList.remove("user-identification__form--close");
     formAuthorizeElement.classList.add("user-identification__form--close");
-  }
-  else return
-});
+  } else return
+}
+
+sliderAuthorizeElement.addEventListener('click', openAutorize);
+
+sliderRegisterElement.addEventListener('click', openRegister);
+
+var submitFormRegister = function () {
+  event.preventDefault();
+}
+
+var submitFormAutorize = function () {
+  event.preventDefault();
+}
+
+registerSubmitElement.addEventListener("click", submitFormRegister)
+
+autorizeSubmitElement.addEventListener("click", submitFormAutorize)

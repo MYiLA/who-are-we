@@ -55,6 +55,11 @@
     background-size: 100%;
     background-position: 0 -210px;
   }
+
+  @media (min-width: 1600px) {
+    background-size: 85%;
+    background-position: 200px -210px;
+  }
 }
 
 .about-company__title {
